@@ -1,0 +1,49 @@
+<div class="container-p4">
+    <div class="row">
+        {{#each links}}
+
+             <div class="col-md-3 m-3">
+                <div class="card text-center ">
+                    <div class="card-body">
+                        {{!-- <img src="{{Foto}}" alt="" class="card-img-top mx-auto m-2 rounded-circle w-50"> --}}
+                    
+                            <h3 class="card-title text-uppercase">
+                                {{Nombre}}    
+                            </h3>   
+                            <h4 class="card-title text-uppercase">
+
+                                {{Apellido}}
+
+                            </h4>
+                            <h5  class="card-title text-uppercase">
+
+                                {{Edad}} Años
+
+                            </h5>
+                            <h5  class="card-title text-uppercase">
+                                {{DNI}}
+                            </h5>
+                            <h6 class="card-title text-uppercase">
+                                {{Sector}}
+                            </h6>
+                       
+                        
+                        <p>{{timeago created_ad}}</p>
+                        <a href='/links/delete/{{id}}' class="btn btn-danger">Borrar empleado</a>
+                        <a href='/links/edit/{{id}}' class="btn btn-secondary">Editar      </a>
+                        <hr>
+                        <a href="" class="btn btn-success" > Asigarle una capacitacion </a>
+                    </div> 
+                </div> 
+             </div>
+
+             {{else}}
+             <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No hay empleados cargados aún</p>
+                    <a href="/links/add">Agrega uno</a>
+                </div>
+             </div>
+        {{/each}}
+    </div>
+</div>
